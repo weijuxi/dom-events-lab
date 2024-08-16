@@ -25,10 +25,7 @@ calculator.addEventListener('click', (event) => {
         currentInput += buttonValue;
         display.textContent = currentInput;
         console.log(buttonValue);
-    }
-  
-    // Example
-    if (buttonValue === '*') {
+    } else if (buttonValue === '*') {
         // Do something with this operator
         //console.log(`You clicked the * operator`);
         if (currentInput) {
@@ -37,9 +34,7 @@ calculator.addEventListener('click', (event) => {
             operator = '*';
             console.log('You clicked the * operator');
         }
-    }
-    
-    if (buttonValue === '=') {
+    } else if (buttonValue === '=') {
         // Handle the equals button click
         //console.log('Equals button clicked');
         // Convert the string inputs into numbers and perform the operation
@@ -50,9 +45,7 @@ calculator.addEventListener('click', (event) => {
             operator = '';      
             console.log('Equals button clicked');
         }
-    }
-
-    if (buttonValue === '+') {
+    } else if (buttonValue === '+') {
         // Handle the plus button click
         if (currentInput) {
             previousInput = currentInput;
@@ -60,9 +53,7 @@ calculator.addEventListener('click', (event) => {
             operator = '+';
             console.log('Plus button clicked');
         }
-    }
-
-    if (buttonValue === '-') {
+    } else if (buttonValue === '-') {
         // Handle the minus button click
         if (currentInput) {
             previousInput = currentInput;
@@ -70,9 +61,7 @@ calculator.addEventListener('click', (event) => {
             operator = '-';
             console.log('Minus button clicked');
         }
-    }
-
-    if (buttonValue === '/') {
+    } else if (buttonValue === '/') {
         // Handle the divide button click
         if (currentInput) {
             previousInput = currentInput;
@@ -80,9 +69,7 @@ calculator.addEventListener('click', (event) => {
             operator = '/';
             console.log('Divide button clicked');
         }
-    }
-
-    if (buttonValue === 'C') {
+    } else if (buttonValue === 'C') {
     // Handle the clear button click
     // Reset the calculator state and clear the display
         currentInput = '';
@@ -90,6 +77,8 @@ calculator.addEventListener('click', (event) => {
         operator = '';
         display.innerText = '';  // Clear the display
         console.log('Clear button clicked');
+    } else {
+        // handle error
     }
 });
   
